@@ -81,7 +81,12 @@ body,.search-overlay{background:var(--cream);color:var(--ink)}
 #quickSearch .search-field{display:grid;gap:6px;min-width:0;padding:0;border:0}
 #quickSearch .search-field label{margin:0;color:var(--muted);font-size:10px;letter-spacing:.08em}
 #quickSearch .search-field input,#quickSearch .search-field select{box-sizing:border-box;display:block;width:100%;min-width:0;max-width:100%;height:46px;margin:0;padding:0 9px;border:1px solid var(--line);border-radius:10px;font-size:14px}
-#quickSearch input[type=date]::-webkit-date-and-time-value{margin:0;text-align:left}
+#quickSearch #dates{-webkit-appearance:none;appearance:none;min-inline-size:0;text-align:left;line-height:normal;cursor:pointer}
+#quickSearch #dates::-webkit-date-and-time-value{min-width:0;margin:0;text-align:left}
+#quickSearch #dates::-webkit-datetime-edit{min-width:0;padding:0}
+#quickSearch #dates::-webkit-datetime-edit-fields-wrapper{padding:0}
+#quickSearch #dates::-webkit-calendar-picker-indicator{margin:0;padding:0;opacity:.75}
+@media(max-width:380px){#quickSearch #dates{padding-inline:6px}}
 #quickSearch .button{min-height:46px;margin:0;padding:10px 18px}
 @media(max-width:1050px){#quickSearch{grid-template-columns:repeat(5,minmax(0,1fr))}#quickSearch .button{grid-column:1/-1}}
 @media(max-width:700px){#quickSearch{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 10px;padding:14px}#quickSearch .quick-budget{grid-column:1/-1}#quickSearch .search-field input,#quickSearch .search-field select{font-size:16px}#quickSearch .button{min-height:48px}}
